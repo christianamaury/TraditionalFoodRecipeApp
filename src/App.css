@@ -1,3 +1,80 @@
+.App{
+min-height: 100vh;
+/* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+
+}
+
+.search-form{
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;;
+  align-items: center;
+}
+
+.search-bar{
+  width: 50%;
+  border:none;
+  padding: 10px;
+  font-size: 1.0rem;
+}
+
+
+
+a{
+  color: black;
+  margin-bottom: 10px;
+}
+
+.search-button{
+  background: white;
+  border:none;
+  padding: 10px 20px;
+  margin-left: 5px;
+  color: lightcoral;
+  font-size: 0.9em;
+}
+
+.search-button:hover{
+  background: lightcoral;
+  color: white;
+}
+
+.recipes{
+  display: flex;;
+  justify-content: space-around;;
+  flex-wrap: wrap;
+  color: lightcoral;
+}
+
+@media only screen and (max-width: 600px){
+  .search-bar{
+    width: 55%;
+    border:none;
+    padding: 10px;
+    font-size: 0.8em;
+  }
+
+  .recipes{
+    display:inline;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    color: lightcoral;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .recipes{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    color: lightcoral;
+  }
+
+}
+
+
+/*OLD CSS Classes..
 .App {
   text-align: center;
 }
@@ -36,3 +113,4 @@
     transform: rotate(360deg);
   }
 }
+*/

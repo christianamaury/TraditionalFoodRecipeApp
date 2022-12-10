@@ -1,0 +1,84 @@
+.recipe{
+  border-radius: 10px;
+  box-shadow: 0px 5px rgb(71, 71, 71);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: white;
+  align-items: center;;
+  min-width: 40%;
+}
+
+.image{
+  border-radius: 5%;
+  width: 200px;
+  box-shadow: 0px 5px rgb(71, 71, 71);
+  margin-bottom: 10px;
+  height: 200;
+}
+a:hover {
+background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+color: white;
+}
+
+@media only screen and (max-width: 600px){
+  .recipe{
+    border-radius: 10px;
+    box-shadow: 0px 5px rgb(71, 71, 71);
+    margin: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: white;
+    align-items: center;;
+    min-width: 40%;
+    font-size: 1.01rem;
+  }
+
+  .image{
+    border-radius: 5%;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px rgb(71, 71, 71);
+    width: 200px;
+    height: 200;
+  }
+
+  a:hover {
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  color: white;
+  }
+}
+
+
+
+
+@media only screen and (min-width: 600px) {
+  .recipe{
+    border-radius: 10px;
+    box-shadow: 0px 5px rgb(71, 71, 71);
+    margin: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: white;
+    align-items: center;;
+    min-width: 40%;
+    font-size: 1.01rem;
+  }
+
+  a:hover {
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  color: white;
+  }
+
+
+  .image{
+    border-radius: 5%;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px rgb(71, 71, 71);
+    width: 200px;
+    height: 200;
+  }
+
+}
