@@ -2,9 +2,18 @@ import Recipe from './Recipe';
 import logo from './logo.svg';
 //For re-rendering purposes
 import React, {useEffect, useState} from "react";
+<<<<<<< HEAD
 import './App.css';
 import {Title} from "./components/Title";
 import {Footer} from "./components/Footer";
+=======
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import './App.css';
+import {PrivacyPolicy} from "./components/PrivacyPolicy";
+import {Title} from "./components/Title";
+import {Footer} from "./components/Footer";
+import {Nav} from "./components/Nav";
+>>>>>>> alpha
 
 const App = () => {
 
@@ -14,7 +23,11 @@ const App = () => {
   const INITIAL_SEARCH = 'pasta';
   const Example_Req = `https://api.edamam.com/search?q=${INITIAL_SEARCH}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
+<<<<<<< HEAD
 //const [counter, setCounter] = useState(0);
+=======
+
+>>>>>>> alpha
 //Setting an empty array of objects
 const [recipes, setRecipes] = useState([]);
 
@@ -35,6 +48,7 @@ const getSearch = e => {
   e.preventDefault();
   setQuery(search);
   setSearch('');
+<<<<<<< HEAD
 
 }
 
@@ -102,7 +116,73 @@ function App() {
 
     </div>
   );
+=======
+>>>>>>> alpha
 }
 */
+
+//This is a function that takes an arrow function
+//The first time our page render
+//If I only want this to run once, add a second argument empty set of array
+//It will only run whenever I do the second argument. Basically when I submit my search
+useEffect(() => {
+  getRecipes();
+
+console.log('Effect has been run');
+
+},[query]);
+
+//Async function calls call for our recipes
+const getRecipes = async () => {
+
+  const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
+  const data = await response.json();
+
+  setRecipes(data.hits);
+  console.log(data.hits);
+}
+
+const Home = () => (
+  <>
+    <h3 id="heading1"> The place for your favorite recipe 🥗🍽🍹 </h3>
+  </>
+ );
+
+return (
+ <>
+  <Router>
+    <Nav/>
+      <Routes>
+      <Route exact path="/" element={<Home/>} />
+       <Route  path="/privacy" element={<PrivacyPolicy/>}/>
+      </Routes>
+  </Router>
+      <div className="App">
+      <h5 id="heading2"> search for any recipe </h5>
+      <form onSubmit={getSearch} className="search-form">
+        <input className="search-bar" type="text" placeholder="What would you like to cook or drink today? 😋" value={search} onChange={updateSearch}/>
+        <button className="search-button" type="Submit">
+         Search
+        </button>
+      </form>
+
+      <div className="recipes">
+      {recipes.map(recipe => (
+      <Recipe
+      key = {recipe.recipe.label}
+      title = {recipe.recipe.label}
+      calories = {recipe.recipe.calories}
+      image = {recipe.recipe.image}
+      ingredients = {recipe.recipe.ingredients}
+      url = {recipe.recipe.url}
+      />
+      ))}
+      </div>
+      <Footer/>
+  </div>
+  </>
+  )
+}
+
 
 export default App;

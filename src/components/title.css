@@ -33,6 +33,24 @@
 }
 
 @media only screen and (min-width: 600px) {
+<<<<<<< HEAD
 
+=======
+  #heading{
+    text-align: center;
+    padding: -2px 0;
+    margin-top: -20px;
+    margin-bottom: -10px;
+    font-size: 1.1rem;
+    color: lightcoral;
+    background: white;
+  }
+  #heading2{
+    text-align: center;
+    padding: 2px 0;
+    color: white;
+    margin-bottom: -10px;
+  }
+>>>>>>> alpha
 
 }
