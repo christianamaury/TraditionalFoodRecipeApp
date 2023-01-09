@@ -1,38 +1,333 @@
-.App {
-  text-align: center;
+.App{
+min-height: 100vh;
+/* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input::placeholder{
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.reference1Image{
+    /* border-radius: 5%; */
+    width: 80px;
+    /* box-shadow: 0px 5px rgb(71, 71, 71); */
+    margin-bottom: 5px;
+    margin-top: 14px;
+    height: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+min-height: 1vh;
+color: #fff;
+margin-top: -10px;
+margin-bottom: -10px;
+/* margin-right: -180px; */
+
+}
+
+.nav-links{
+width: 40%;
+display: inline-block;
+justify-content: flex-end;
+align-items: center;
+list-style: none;
+margin-top: 10px;
+
+}
+
+.nav-links  a:hover{
+  background: black !important;
+  color: black !important;
+}
+
+#heading1{
+  text-align: center !important;
+  /* padding: 2px 0; */
+  color: lightcoral;
+  margin-top: -5px !important;
+}
+
+#heading2{
+  text-align: center !important;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#heading3{
+    color: lightcoral !important;
+    margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#heading4 {
+  color: lightcoral !important;
+  /* margin-top: 10px; */
+}
+
+#heading4 a:hover
+{
+background: white !important;
+color: black !important;
+
+}
+
+.search-form{
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;;
+  align-items: center;
+}
+
+.search-bar{
+  width: 50%;
+  border:none;
+  padding: 10px;
+  font-size: 1.0rem;
+}
+a{
+  color: black;
+  margin-bottom: 10px;
+}
+
+.search-button{
+  background: white;
+  border:none;
+  padding: 10px 20px;
+  margin-left: 5px;
+  color: lightcoral;
+  font-size: 0.9em;
+}
+
+.search-button:hover{
+  background: lightcoral;
+  color: white;
+}
+
+.recipes{
+  display: flex;;
+  justify-content: space-around;;
+  flex-wrap: wrap;
+  color: lightcoral;
+}
+
+@media only screen and (min-width: 100px)
+{
+  input::placeholder{
+    font-size: 12px;
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+@media only screen and (max-width: 100px)
+{
+  input::placeholder{
+    font-size: 12px !important;
   }
+
+}
+
+@media only screen and (max-width: 600px)
+and (max-width: 400px) {
+
+  input::placeholder{
+    font-size: 20px;
+  }
+
+
+  .search-bar{
+    width: 55%;
+    border:none;
+    padding: 10px;
+    font-size: 0.8em;
+  }
+
+  .recipes{
+    display:inline;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    color: lightcoral;
+  }
+  .nav{
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  min-height: 1vh;
+  color: #fff;
+  margin-top: -10px !important;
+  margin-bottom: -10px !important;
+  margin-right: 60px !important;
+
+  }
+  .nav-links{
+  width: 60% !important;
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  list-style: none;
+
+  }
+
+  .reference1Image{
+      /* border-radius: 5%; */
+      width: 45px;
+      /* box-shadow: 0px 5px rgb(71, 71, 71); */
+      margin-bottom: 5px;
+      margin-top: 14px;
+      height: 45px;
+  }
+
+  #heading3{
+      color: lightcoral !important;
+      margin-left: -10px !important;
+  }
+
+  #heading4 a:hover
+  {
+  background: white !important;
+  color: black !important;
+
+  }
+
+}
+
+
+@media only screen
+    and (min-device-width: 375px)
+    and (device-width: 400px)
+    and (max-width: 400px)
+    and (min-device-height: 812px)
+    and (max-device-width: 375px)
+    and (max-device-height: 812px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (device-width: 414px)
+    and (device-height: 896px)
+    and (-webkit-device-pixel-ratio: 3)
+    {
+      input::placeholder{
+        font-size: 20px;
+      }
+
+
+      .search-bar{
+        width: 55%;
+        border:none;
+        padding: 10px;
+        font-size: 0.8em;
+      }
+
+      .recipes{
+        display:inline;
+        justify-content: space-around;
+        flex-wrap:wrap;
+        color: lightcoral;
+      }
+      .nav{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 1vh;
+      color: #fff;
+      margin-top: -10px;
+      margin-bottom: -10px;
+      margin-right: 60px;
+
+      }
+
+      .nav-links{
+      width: 60%;
+      display: inline-flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+
+      }
+
+      .reference1Image{
+          /* border-radius: 5%; */
+          width: 45px;
+          /* box-shadow: 0px 5px rgb(71, 71, 71); */
+          margin-bottom: 5px;
+          margin-top: 14px;
+          height: 45px;
+      }
+
+      #heading1{
+        text-align: center !important;
+        /* padding: 2px 0; */
+        color: lightcoral;
+        margin-top: 10px !important;
+      }
+
+      #heading4 a:hover
+      {
+      background: white !important;
+      color: black !important;
+
+      }
+
+    }
+
+
+@media only screen and (min-width: 600px) {
+  .recipes{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    color: lightcoral;
+  }
+
+
+
+
+  .nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 1vh;
+  color: #fff;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  margin-right: -180px;
+
+  }
+
+  .nav-links{
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+
+  }
+
+  .reference1Image{
+      /* border-radius: 5%; */
+      width: 92px;
+      /* box-shadow: 0px 5px rgb(71, 71, 71); */
+      margin-bottom: 5px;
+      margin-left: -120px;
+      margin-top: 14px;
+      height: 92px;
+  }
+
+  #heading1{
+    text-align: center !important;
+    /* padding: 2px 0; */
+    color: lightcoral;
+    margin-top: -30px !important;
+  }
+
+  #heading4 a:hover
+  {
+  background: white !important;
+  color: black !important;
+
+  }
+
+  input::placeholder{
+    font-size: 20px;
+  }
+
 }

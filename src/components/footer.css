@@ -1,0 +1,7 @@
+.FooterClass {
+  padding: 2% 5%;
+  text-align: center;
+  /* //This color needs to be change */
+  color: lightcoral;
+  background-color: white;
+}
